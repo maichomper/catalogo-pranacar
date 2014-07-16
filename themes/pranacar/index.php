@@ -5,7 +5,24 @@
 			<h2>Semillas y botanas</h2>
 			<img src="<?php echo THEMEPATH; ?>images/seeds-bg-1000.jpg" />
 			<ul>
-				<li class="columna xmall-12 small-6 medium-6 large-4">
+				<?php
+					$semillasArgs = array(
+						'category_name' 	=> 'semillas-y-botanas',
+						'posts_per_page' 	=> -1
+					);
+					$semillasQuery = new WP_Query($semillasArgs);
+					if ( $semillasQuery->have_posts() ) : while( $semillasQuery->have_posts() ) : $semillasQuery->the_post();
+				?>
+					<li class="columna xmall-12 small-6 medium-6 large-4">
+						<h3 class="columna medium-12 text-center"><?php the_title(); ?></h3>
+						<p class="columna medium-12 text-center">Contenido neto: 250g</p>
+						<?php the_post_thumbnail( 'medium', array('class' => 'columna medium-6') ); ?>
+						<p class="columna medium-6"><?php the_content(); ?></p>
+					</li>
+
+				<?php endwhile; endif; wp_reset_query(); ?>
+				<li class="columna xmall-12 small-6 medium-6
+				large-4">
 					<h3 class="columna medium-12 text-center">Semillas de chía</h3>
 					<p class="columna medium-12 text-center">Contenido neto: 250g</p>
 					<img src="<?php echo THEMEPATH; ?>images/chia.jpg" alt="Semillas de chía" class="columna medium-6">
