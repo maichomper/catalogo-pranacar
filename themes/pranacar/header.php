@@ -25,7 +25,18 @@
 							<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="" />
 						</a>
 					</h1>
-					<a href="#" class="columna medium-2 right">Español</a>
+					<div class="right idioma">
+						<?php if (qtrans_getLanguage() == 'es'){ ?>
+							<a href="<?php echo site_url('es'); ?>" class="text-center">Español</a>
+							|
+							<a href="<?php echo site_url('en'); ?>" class="text-center greyed">Inglés</a>
+						<?php } else { ?>
+							<a href="<?php echo site_url('es'); ?>" class="text-center greyed">Spanish</a>
+							|
+							<a href="<?php echo site_url('en'); ?>" class="text-center">English</a>
+						<?php } ?>
+					</div>
+
 				</div>
 			</header>
 
