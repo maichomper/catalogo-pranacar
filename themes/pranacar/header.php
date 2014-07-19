@@ -20,23 +20,40 @@
 
 			<header>
 				<div class="width clearfix">
-					<h1 class="columna medium-3">
+					<h1 class="columna xmall-3">
 						<a href="#">
 							<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="" />
 						</a>
 					</h1>
-					<div class="right idioma">
+					<div class="span xmall-2 right idioma">
 						<?php if (qtrans_getLanguage() == 'es'){ ?>
-							<a href="<?php echo site_url('es'); ?>" class="text-center">Español</a>
-							|
-							<a href="<?php echo site_url('en'); ?>" class="text-center greyed">Inglés</a>
+							<a href="<?php echo site_url('es'); ?>" class="block">Español</a>
+							<a href="<?php echo site_url('en'); ?>" class="block greyed">Inglés</a>
 						<?php } else { ?>
-							<a href="<?php echo site_url('es'); ?>" class="text-center greyed">Spanish</a>
-							|
-							<a href="<?php echo site_url('en'); ?>" class="text-center">English</a>
+							<a href="<?php echo site_url('en'); ?>" class="block">English</a>
+							<a href="<?php echo site_url('es'); ?>" class="block greyed">Spanish</a>
 						<?php } ?>
 					</div>
-
+					<nav class="columna xmall-4 right">
+						<a href="regular-foods" data-seccion="regular-foods" class="text-center columna xmall-6">
+							<?php
+								if (qtrans_getLanguage() == 'es'){
+									echo 'Regular foods';
+								} else {
+									echo 'Regular foods';
+								}
+							?>
+						</a>
+						<a href="superfoods" data-seccion="superfoods" class="text-center columna xmall-6">
+							<?php
+								if (qtrans_getLanguage() == 'es'){
+									echo 'Superfoods';
+								} else {
+									echo 'Superfoods';
+								}
+							?>
+						</a>
+					</nav>
 				</div>
 			</header>
 

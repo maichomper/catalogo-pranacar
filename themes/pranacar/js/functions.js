@@ -3,9 +3,18 @@
 	"use strict";
 
 	$(function(){
+
+		$('nav a').on('click', function(e){
+			e.preventDefault();
+			var seccion = $(this).data('seccion'),
+				seccionID = '#'+seccion;
+			scrollTo( $(seccionID) );
+		});
+
 		$('.categoria').on('click', function(){
 			toggleProductos( $(this).find('ul') );
 		});
+
 	});
 
 	function toggleProductos(elemento) {

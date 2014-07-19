@@ -70,6 +70,7 @@ figure {margin: 0;}
 /*** VARIABLES ***/
 
 @claro: 		#fff;
+@obscuro: 		#000;
 @highlight:		#1aa2dc;
 @secundario:    #83ad79;
 @terciario:    	#428BCA;
@@ -253,15 +254,19 @@ body{ background: #fff; font-family: 'Roboto'; }
 /*** HEADER ***/
 header { padding:@margen/2; }
 
-.idioma{ .font(1.6em, 1, 'Roboto'); font-weight: 300; color:@terciario;
-	a { color:@terciario; text-decoration: none;
+nav{ .font(1.3em, 1, 'Roboto');
+	a{ color: @secundario; text-decoration: none; }
+}
+
+.idioma{ .font(1.2em, 1, 'Roboto'); font-weight: 300; text-align: right; color:@terciario;
+	a { margin-bottom: (@margen/4); color: @terciario; text-decoration: none; text-align: right;
 		&.greyed{ opacity: 0.5; }
 	}
 }
 
 .catalogo {
 	.categoria { position: relative; cursor: pointer;
-		h2 { position: absolute; top:0; left:0; margin:0; padding:@margen/2; .font(1.3em, 1.3em, 'Roboto'); font-weight: 100; color:@claro; background: @secundario; border-bottom:2px solid @claro; z-index: 2; }
+		h2 { position: absolute; top:0; left:0; margin:0; padding:@margen/2; .font(1.3em, 1.3em, 'Roboto'); font-weight: 300; color:@obscuro; background: @secundario; border-bottom:2px solid @obscuro; z-index: 2; }
 		h2 + img:hover{ opacity: 0.7; }
 		ul { display: none; list-style-type: none; cursor: default;
 			li { margin-bottom: @margen;
